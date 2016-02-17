@@ -32,7 +32,7 @@ self.addEventListener('activate', function (event) {
 self.addEventListener('fetch', function (event) {
     var requestURL = new URL(event.request.url);
 
-    if (event.request.mode === 'navigate') {
+    if (event.request.headers.get('Accept').indexOf('/html') > -1) {
         event.respondWith(caches.match(event.request).then(function (response) {
             if (response) {
                 console.log('returning cached', requestURL.pathname);
