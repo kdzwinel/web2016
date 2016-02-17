@@ -16,6 +16,7 @@ ref.onAuth(function (authData) {
     if (authData) {
         console.log("Authenticated with uid:", authData.uid);
         uid = authData.uid;
+        sendData();
         showApis();
     } else {
         console.log("Client unauthenticated.");
