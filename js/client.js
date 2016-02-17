@@ -200,7 +200,7 @@ function goToSlide() {
 // SERVICE WORKER
 
 if ('serviceWorker' in navigator) {
-    navigator.serviceWorker.register('/sw.js').then(function (registration) {
+    navigator.serviceWorker.register('/web2016/sw.js').then(function (registration) {
         // Registration was successful
         console.log('ServiceWorker registration successful with scope: ', registration.scope, registration);
         $swStatus.innerHTML = 'ServiceWorker registered! &#x1F386; <br/> Try reloading this page while offline.';
