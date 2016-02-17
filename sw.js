@@ -2,7 +2,7 @@
 
 var VERSION = 1;
 var CACHE_NAME = 'cache-v' + VERSION;
-var urlsToCache = ['/client/js/firebase.js', '/client/js/client.js', '/client/js/modernizr-custom.js', '/client/offline.html', '/client/js/offline.js', '/client/css/styles.css'];
+var urlsToCache = ['/js/firebase.js', '/js/client.js', '/js/modernizr-custom.js', '/offline.html', '/js/offline.js', '/css/styles.css'];
 
 self.addEventListener('install', function (event) {
     console.log('install ' + VERSION);
@@ -40,7 +40,7 @@ self.addEventListener('fetch', function (event) {
 
             return response || fetch(event.request);
         }).catch(function () {
-            return caches.match('/client/offline.html');
+            return caches.match('/offline.html');
         }));
     } else {
         event.respondWith(caches.match(event.request).then(function (response) {
