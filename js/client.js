@@ -115,6 +115,12 @@ canvas.addEventListener('click', function (e) {
     var x = e.offsetX;
     var y = e.offsetY;
 
+    x = x > canvas.width ? canvas.width : x;
+    x = x < 0 ? 0 : x;
+
+    y = y > canvas.height ? canvas.height : y;
+    y = y < 0 ? 0 : y;
+
     changeColor(x, y);
 });
 

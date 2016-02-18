@@ -1,8 +1,8 @@
 'use strict';
 
-var VERSION = 1;
+var VERSION = 2;
 var CACHE_NAME = 'cache-v' + VERSION;
-var urlsToCache = ['/web2016/js/firebase.js', '/web2016/js/client.js', '/web2016/js/modernizr-custom.js', '/web2016/offline.html', '/web2016/js/offline.js', '/web2016/css/styles.css'];
+var urlsToCache = ['/web2016/offline.html', '/web2016/js/offline.js'];
 
 self.addEventListener('install', function (event) {
     console.log('install ' + VERSION);
