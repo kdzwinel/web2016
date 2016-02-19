@@ -104,12 +104,23 @@ canvas {
             align-items: center;
 }
 
-.end a {
+.end div {
     text-align: center;
     -webkit-box-flex: 1;
     -webkit-flex-grow: 1;
         -ms-flex-positive: 1;
             flex-grow: 1;
+}
+
+.end div a.big {
     color: black;
+    display: block;
     font-size: 40px;
+}
+
+.end div a.small {
+    color: black;
+    display: block;
+    margin-top: 40px;
+    font-size: 15px;
 }
